@@ -3,6 +3,10 @@ package de.konry.adoc2k6.tasks;
 import de.konry.adoc2k6.filehandling.AdocFileReader;
 
 abstract public class AdventOfCodeExtends implements AdventOfCodeInterface {
+	
+	public enum ChooseSet {
+		Lines, CSVStringValues
+	}
 
 	protected String[] lines = null;
 	protected String[] csvStringValues = null;
@@ -53,22 +57,47 @@ abstract public class AdventOfCodeExtends implements AdventOfCodeInterface {
 	
 	@Override
 	public void readFile(String string) {
-		setLinesOfFile(AdocFileReader.readLines("./input/day01_1.txt"));
-		setStringArray(AdocFileReader.readCSVFile("./input/day01_1.txt"));
-		setIntArray(AdocFileReader.readCSVFileToInt("./input/day01_1.txt"));
+		setLinesOfFile(AdocFileReader.readLines(string));
+		setStringArray(AdocFileReader.readCSVFile(string));
+		setIntArray(AdocFileReader.readCSVFileToInt(string));
 		
 	}
 	
 
 	@Override
-	public void runPartOne(String[] strings) {
+	public void runPartOne(String[] strings, ChooseSet cs) {
+		switch(cs){
+		case Lines:
+			setLinesOfFile(strings);
+			valuesSet = 0;
+			break;
+		case CSVStringValues:
+			setStringArray(strings);
+			valuesSet = 1;
+			break;
+		default:
+		System.err.println("currently not implemented");
+			break;
+		}
 		setStringArray(strings);
 		runPartOne();
 	}
 
 	@Override
-	public void runPartTwo(String[] strings) {
-		setStringArray(strings);
+	public void runPartTwo(String[] strings, ChooseSet cs) {
+		switch(cs){
+		case Lines:
+			setLinesOfFile(strings);
+			valuesSet = 0;
+			break;
+		case CSVStringValues:
+			setStringArray(strings);
+			valuesSet = 1;
+			break;
+		default:
+		System.err.println("currently not implemented");
+			break;
+		}
 		runPartTwo();
 	}
 

@@ -3,6 +3,7 @@ package de.konry.adoc2k6.tasks.d1;
 import java.util.ArrayList;
 
 import de.konry.adoc2k6.tasks.AdventOfCodeExtends;
+import de.konry.adoc2k6.tasks.AdventOfCodeExtends.ChooseSet;
 
 public class DayOne extends AdventOfCodeExtends {
 
@@ -13,21 +14,21 @@ public class DayOne extends AdventOfCodeExtends {
 	@Override
 	public void runTestsOne() {
 		String[] temp = new String[] { "R2", "L3" };
-		runPartOne(temp);
+		runPartOne(temp, ChooseSet.CSVStringValues);
 
 		temp = new String[] { "R2", "R2", "R2" };
-		runPartOne(temp);
+		runPartOne(temp, ChooseSet.CSVStringValues);
 
 		temp = new String[] { "R5", "L5", "R5", "R3" };
-		runPartOne(temp);
+		runPartOne(temp, ChooseSet.CSVStringValues);
 
 		temp = new String[] { "R5", "R5", "R5", "R5", "L5", "L5", "L5", "L5" };
-		runPartOne(temp);
+		runPartOne(temp, ChooseSet.CSVStringValues);
 	}
 
 	public void runTestsTwo() {
 		String[] temp = new String[] { "R8", "R4", "R4", "R8" };
-		runPartTwo(temp);
+		runPartTwo(temp, ChooseSet.CSVStringValues);
 	}
 
 	@Override
