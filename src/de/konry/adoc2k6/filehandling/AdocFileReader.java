@@ -37,6 +37,7 @@ public class AdocFileReader {
 
 	public static String[] readCSVFile(String file) {
 		ArrayList<String> input = new ArrayList<String>();
+		try{
 		String line = readLines(file)[0];
 		String[] temp = line.split(",");
 
@@ -44,12 +45,16 @@ public class AdocFileReader {
 			s = s.replace(" ", "");
 			input.add(s);
 		}
+		} catch (ArrayIndexOutOfBoundsException e){
+			
+		}
 
 		return input.toArray(new String[input.size()]);
 	}
 
 	public static Integer[] readCSVFileToInt(String file) {
 		ArrayList<Integer> input = new ArrayList<Integer>();
+		try{
 		String line = readLines(file)[0];
 		String[] temp = line.split(",");
 
@@ -60,6 +65,9 @@ public class AdocFileReader {
 				//System.err.println("NumberFormatException for string " + s);
 			}
 
+		}
+		}catch (ArrayIndexOutOfBoundsException e){
+			
 		}
 
 		return input.toArray(new Integer[input.size()]);

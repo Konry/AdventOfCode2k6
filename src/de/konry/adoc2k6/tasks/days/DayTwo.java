@@ -1,4 +1,4 @@
-package de.konry.adoc2k6.tasks.d2;
+package de.konry.adoc2k6.tasks.days;
 
 import de.konry.adoc2k6.tasks.AdventOfCodeExtends;
 

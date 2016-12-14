@@ -1,4 +1,4 @@
-package de.konry.adoc2k6.tasks.d1;
+package de.konry.adoc2k6.tasks.days;
 
 import java.util.ArrayList;
 

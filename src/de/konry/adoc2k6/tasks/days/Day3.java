@@ -1,4 +1,4 @@
-package de.konry.adoc2k6.tasks.d3;
+package de.konry.adoc2k6.tasks.days;
 
 import java.util.Arrays;
 

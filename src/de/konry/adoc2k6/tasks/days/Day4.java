@@ -1,4 +1,4 @@
-package de.konry.adoc2k6.tasks.d4;
+package de.konry.adoc2k6.tasks.days;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -34,7 +34,6 @@ public class Day4 extends AdventOfCodeExtends {
 		public void print(){
 			System.out.println((char)getStringForIntCode() + " " +count);
 		}
-
 	}
 
 	@Override
