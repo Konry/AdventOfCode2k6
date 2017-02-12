@@ -9,14 +9,15 @@ public class AdventOfCode2k6 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		AdventOfCodeExtends aoci = new Day14();
-//		aoci.runTestsOne();
+		AdventOfCodeExtends aoci = new Day17();
+		aoci.runTestsOne();
 //		aoci.runTestsTwo();
-		aoci.readFile("./input/day14_1.txt");
+		aoci.readFile("./input/day16_1.txt");
 		System.out.println();
 //		aoci.runPartOne();
 		System.out.println();
-		aoci.runPartTwo();
+		aoci.readFile("./input/day16_2.txt");
+//		aoci.runPartTwo();
 		
 	}	
 
